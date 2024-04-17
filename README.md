@@ -5,4 +5,6 @@ An integrated circuit, also known as a microchip, chip or IC, is a small electro
 </p>
 <br> **Wire Bond**
 <br>Wire bonding is the method of making interconnections between an integrated circuit (IC) or other semiconductor device and its packaging during semiconductor device fabrication. 
-![Screenshot 2024-04-17 202738](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/27e71f7e-1d7b-4c72-935a-f6aa56056649)
+<br> <p align="center">
+  ![Screenshot 2024-04-17 202738](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/27e71f7e-1d7b-4c72-935a-f6aa56056649)
+</p>
