@@ -60,6 +60,8 @@ OpenLane is an automated RTL to GDSII flow that is composed of several tools suc
 - We use `-interactive` to design the system as per the flow for better understanding
 <br>
 
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/fc79a6dc-4dfc-47ea-96cc-c1f819993702)
+
 
 
 
