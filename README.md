@@ -43,3 +43,25 @@ RTL to GDSII Flow
 ```
 <br>
 
+- **ASIC Design Flow using OpenLANE**
+<br>
+An application-specific integrated circuit is an integrated circuit (IC) that's custom-designed for a particular task or application. Unlike FPGA boards that can be programmed to meet a variety of use case requirements after manufacturing, ASIC designs are tailored early in the design process to address specific needs.
+<br>
+OpenLane is an automated RTL to GDSII flow that is composed of several tools such as OpenROAD, Yosys, Magic, Netgen, Fault, CVC, SPEF-Extractor, CU-GR, Klayout and a number of scripts used for design exploration and optimization. This collection of tools performs all steps required in a full ASIC implementation from RTL to GDSII.
+<br><br>
+
+![image_2024-04-18_193042068](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/3c34612a-720c-4b59-98d9-7f591a605650)
+<br>
+
+## Design Preparation Step
+<br>
+
+- To access OpenLANE, we enter `cd Desktop/work/toold/openlane_working_dir/openlane/docker`
+- We use `-interactive` to design the system as per the flow for better understanding
+<br>
+
+
+
+
+
+
