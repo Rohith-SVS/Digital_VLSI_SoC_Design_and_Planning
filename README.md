@@ -104,7 +104,11 @@ Flop Ratio = Total number of flip flops / Total number of Cells
 ![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/b35278ad-cbd0-4c45-b541-977625e0a618)
 <br>
 
-
+- Floorplan results are created in the below locations.
+```
+vsduser@vsdsquadron:~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-04_15-16/results/floorplan$ ls
+merged_unpadded.lef  picorv32a.floorplan.def  picorv32a.floorplan.def.png
+```
 
 
 
