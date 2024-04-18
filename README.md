@@ -62,6 +62,48 @@ OpenLane is an automated RTL to GDSII flow that is composed of several tools suc
 
 ![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/fc79a6dc-4dfc-47ea-96cc-c1f819993702)
 
+<br>
+
+- Design setup stage involves setting up the data structure, file designs and other requirements of a design and is done using the command `prep -design picorv32a`
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/bd7b8c84-5201-4358-aa39-15aac9a5102d)
+
+<br>
+
+ - `run_synthesis` is used to run the Yosys synthesis tool as well as the abc
+ - The result for the above command will be:
+<br><br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/e851f642-d6a7-4e12-948f-d23fe75f9bff)
+<br>
+```
+Flop Ratio = Total number of flip flops / Total number of Cells
+```
+
+- In the output of the above synthesis, the flop ratio is 10.84%<br><br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/73e15429-efaf-42bd-8aa7-0f66050641da)
+
+<br>
+
+- The output of the ABC Synthesis is:
+<br><br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/015bdd61-ce9d-499a-b189-8c83bb91b883)
+<br>
+
+## Floorplan using OpenLANE
+
+<br>
+
+- `run_floorplan` command is used to design the floorplan in Openlane. The output will be as follows:
+<br><br>
+
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/b35278ad-cbd0-4c45-b541-977625e0a618)
+<br>
+
 
 
 
