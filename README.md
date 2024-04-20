@@ -110,7 +110,7 @@ vsduser@vsdsquadron:~/Desktop/work/tools/openlane_working_dir/openlane/designs/p
 merged_unpadded.lef  picorv32a.floorplan.def  picorv32a.floorplan.def.png
 ```
 
-- The results of the floorplan will be recorded as follows:
+- The results of the floorplan will be recorded as follows:<br><br>
 ![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/eb09c3c4-787d-4b66-a1a6-c1f9abd8cd6e)
 
 <br>
@@ -120,6 +120,20 @@ merged_unpadded.lef  picorv32a.floorplan.def  picorv32a.floorplan.def.png
 magic -T /home/<user name>/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def
 ```
 
+- After Executing the above command, a pop up window will appear as shown<br><br>
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/b3fb98b0-39b7-48d4-b955-6738bf6befbe)
+
+<br>
+
+- We can use `s` to select the floorplan and `v` to align it to the center of the screen<br><br>
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/1f9e9b7b-fed6-43f4-b552-eecc55872946)
+
+<br>
+
+- We can zoom sepicfic portions of the floorplan using `z` and the components of the floorplan can be selected using `s` . Upon writing `%what`, we will recieve the details of the selected component<br><br>
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/98d6157c-344a-4337-bc74-f843c36371c8)
+
+<br>
 
 
 
