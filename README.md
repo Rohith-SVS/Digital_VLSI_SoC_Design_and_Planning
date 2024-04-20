@@ -117,6 +117,9 @@ merged_unpadded.lef  picorv32a.floorplan.def  picorv32a.floorplan.def.png
 
 - The floorplan can be viewed and edited using the Magic software which can be accessed using the following code-
 ```
+magic -T /home/<user name>/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def
+```
+
 
 
 
