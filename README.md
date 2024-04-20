@@ -110,6 +110,16 @@ vsduser@vsdsquadron:~/Desktop/work/tools/openlane_working_dir/openlane/designs/p
 merged_unpadded.lef  picorv32a.floorplan.def  picorv32a.floorplan.def.png
 ```
 
+- The results of the floorplan will be recorded as follows:
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/eb09c3c4-787d-4b66-a1a6-c1f9abd8cd6e)
+
+<br>
+
+- The floorplan can be viewed and edited using the Magic software which can be accessed using the following code-
+```
+
+
+
 
 
 
