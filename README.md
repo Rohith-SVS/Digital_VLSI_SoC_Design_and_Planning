@@ -163,7 +163,32 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/28226865-7c24-42b1-b50d-e0f64dc12edf)
 <br>
 
+## Spice Extraction and Simulation of Inverter Cell
 
+- This content focuses mainly on the extraction and simulation of the Spice model for a given cell.
+- The cell view under design is Inverter.
+- We obtain the library files from GitHub link
+```https://github.com/nickson-jose/vsdstdcelldesign.git```
+Courtesy: nickson-jose
+- The GitHub repo can be imported to the system using the command `git clone` followed by the URL link of the Repo
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/c572135b-25ac-4e14-bc36-22cecea4222f)
+<br>
+
+- `sky130A.tech` file is copied from `~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic` and pasted into `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/` using the command
+```
+  cp sky130A.tech /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/
+```
+
+- The inverter file is accessed using Magic Software using the following command:<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/875ded69-f3ef-4e18-9c75-98ecfb328fbd)
+<br>
+
+- The following Window will appear:<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/09d54659-d7d5-46d2-b5b6-90e8f99e57ba)
 
 
 
