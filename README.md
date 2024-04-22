@@ -150,8 +150,20 @@ magic -T /home/<user name>/Desktop/work/tools/openlane_working_dir/pdks/sky130A/
 
 - The placement results can be viewed in magic from `/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-04_12-46/results/placement` by using the command
 ```
-magic -T Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
 ```
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/a46db3f4-4e77-4cea-8b50-b6fa6cac5f6d)
+<br>
+
+- We can zoom in the magic software to view the placement of the standard cell rows
+<br><br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/28226865-7c24-42b1-b50d-e0f64dc12edf)
+<br>
+
+
 
 
 
