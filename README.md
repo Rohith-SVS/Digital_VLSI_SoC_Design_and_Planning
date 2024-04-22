@@ -135,6 +135,23 @@ magic -T /home/<user name>/Desktop/work/tools/openlane_working_dir/pdks/sky130A/
 
 <br>
 
+## Congestion aware placement using RePIAce
+
+- `run_placement` command is used to perform global placement in OpenLANE. The main objective of global placement is to reduce the wire length. OpenLANE uses the concept of `Half Parameter Wire Length(HPWL)` to optimize the wiring in global placement.<br><br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/ce4c7331-bb22-4d5d-8cf2-75e34eb714fb)
+<br>
+
+- A snapshot of the placement is automatically careted after execution which is named as `picorv32a.placement.def.png`. This image can be accessed using the code `xdg-open picorv32a.placement.def.png` to obtain the following
+<br><br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/8b053b5a-4c59-4e0d-903e-110e1c46f1ed)
+<br>
+
+- The placement results can be viewed in magic from `/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-04_12-46/results/placement` by using the command
+```
+magic -T Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
 
 
 
