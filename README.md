@@ -188,7 +188,30 @@ Courtesy: nickson-jose
 
 - The following Window will appear:<br>
 
-![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/09d54659-d7d5-46d2-b5b6-90e8f99e57ba)
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/09d54659-d7d5-46d2-b5b6-90e8f99e57ba)<br>
+
+- The Magic software uses different color coding scheme to represent different distinct regions or layers of an Integrated circuit. The `%what` function can be used to identify the different components in the design
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/e50d9fe6-c389-4d89-b9a7-4bf5c74afc10)
+<br>
+
+- `%extract all` command is used to extract the info of the spice model and the extracted information is stored in the name of `sky130_inv.ext` <br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/aaa601b2-0c11-4bc6-80ce-7b67dc381365)
+<br>
+
+- `%ext2spice cthresh 0 rthresh 0` is used to extract the parasitic capacitances induced in the design. The information can be stored in a file by using the command `%ext2spice`. It will be saved under the name `sky130_inv.spice`
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/816066b5-a3b4-4bbe-802d-60193feaccde)
+<br>
+
+- The spice file generated will be as follows:
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/bfaf2a0e-95a5-4067-bb47-0e4200b2fccb)
+
 
 
 
