@@ -294,8 +294,65 @@ check drc
 ![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/5cf5edcc-7267-4107-ac4d-f02a0a16d127)
 <br>
 
+## Pre Layout Timing Analysis and Importance of good clock tree
+- The .lef file can be accessed using the following command
+```
+pdk/sky130/libs.tech/openlane/sky130_fd_sc_hd/track.info
+```
+<br>
 
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/2d775516-aaf9-446e-a9d5-98b9f337e2de)
 
+- In the layout, ports are situated on the li1 layer. To ensure that ports align with the intersection of tracks, we need to convert the grid into tracks.
+- To accomplish this, we'll first open the tracks file and then access the tkcon window and execute the help grid command
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/f8f159bf-6a5e-49fb-b665-5e2b03d33e1b)
+<br>
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/ce01ae08-6a7e-4f8e-bffd-ddeb7a388457)
+<br>
+
+- The width of the standard cells should be in odd multiples of track pitch
+- We have to execute the command, to extrac the `sky130_inv.lef` and `sky130_vsdinv.mag` file `lef write` .
+ <br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/60a32982-d327-44da-8c88-7046977a51fe)
+<br>
+- The lef file generated will be as follows:
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/a04f911d-e01e-4c99-acb3-7356c1defe36)
+<br>
+
+- We copy `sky130_vsdin.lef` and paste it in `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src`
+- we also copy `sky130_fd_sc_hd__*` into `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src`
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/929c18ec-23d3-4000-a513-159820335843)
+<br>
+
+- We have to make some configurations in `config.tcl`
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/fa667001-ad94-4f04-bdeb-790c59634023)
+<br>
+
+- Now we will go to the open lane directory and execute the docker command.
+```
+./flow.tcl -interactive
+package require openlane 0.9
+prep -design picorv32a
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]      
+add_lefs -src $lefs
+run_synthesis
+```
+- We will get te following output
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/6a61dbfb-baf9-4d34-8056-a3b22550809d)
+<br>
+
+-
 
 
 
