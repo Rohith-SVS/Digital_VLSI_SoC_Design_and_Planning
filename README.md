@@ -388,7 +388,7 @@ wns -24.89
 ![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/acaa61f8-1114-4d46-831a-cbc32fd74f02)
 <br>
 
-- The floorplan will be executed as follows<br>
+- The floorplan executed can be verified in the Magic terminal<br>
 
 ![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/609bae67-6e54-4bb9-b963-246b4a83be69)
 <br>
