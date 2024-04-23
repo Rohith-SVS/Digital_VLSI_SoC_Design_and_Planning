@@ -271,6 +271,31 @@ $ cd drc_tests
 
 ![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/47b475ec-48d4-4b29-9e05-6ca33d02f306)
 
+## Exercise to fix poly.9 error in Sky130 tech file
+
+- `load poly` command is executed to load the file containing errors<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/a31b34c8-c382-496a-a31d-0c72316ea9b9)
+<br>
+
+- The errors in DRC are as follows:<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/815dac6c-4e01-4e97-b624-6cc7fbe018ae)
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/26e6b9bf-f880-4633-8b3b-4b89bafd0b5e)
+<br>
+
+- New rules are added as shown above and we use the command
+```
+tech load sky130A.tech
+check drc
+```
+- The errors will be rectified<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/5cf5edcc-7267-4107-ac4d-f02a0a16d127)
+<br>
+
+
+
 
 
 
