@@ -416,7 +416,84 @@ wns -24.89
 
 ## Optimize synthesis to reduce Violations
 
--
+- Since more fanout is causing more delay we can add parameter to reduce fanout and do synthesis again
+```
+prep -design picorv32a -tag 01-04_12-54 -overwrite
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+set ::env(SYNTH_SIZING) 1
+set ::env(SYNTH_MAX_FANOUT) 4
+echo $::env(SYNTH_DRIVING_CELL)
+run_synthesis
+```
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/ed84f216-16a9-45a5-bcaa-1e26159bd1f5)
+<br>
+
+- Check the changes which occur in `pre_sta.conf`<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/ecde5739-ce87-4762-8eef-f3df9ef3a8d7)
+
+## Lab steps to do basic timing ECO
+- As we can see, OR gate of drive strength 2 is driving 4 Fan Out<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/194537d8-67a4-4416-be2c-b94d85f8910b)
+<br>
+
+- The following commands can be used for optimization
+```
+report_net -connections _11672_
+help replace_cell
+replace_cell _14510_ sky130_fd_sc_hd__or3_4
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/014df468-23d9-469a-8f05-8a0976617e17)
+<br>
+
+- Another OR gate of Drive strength 2 is driving 4 fanouts
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/d5ece214-3ec6-4367-8da5-7d11ba16c40c)
+<br>
+
+- Upon changing the following parameters, the slack is reduced by a very small amount<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/77053f4d-fa54-4a7e-99db-abd8edfe5bf7)
+
+## Lab steps to Run CTS using Triton
+- Replace the old netlist with the new netlist generated after ECO fix
+- Type `write_verilog` and enter the destination:
+```
+% write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/01-04_12-54/results/synthesis/picorv32a.synthesis.v
+```
+- To prevent our modifications from being cleared, we will execute from floorplan
+```
+   prep -design picorv32a -tag 01-04_12-54
+   set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+   add_lefs -src $lefs
+   set ::env(SYNTH_STRATEGY) "DELAY 3"
+   set ::env(SYNTH_SIZING) 1
+   init_floorplan
+   place_io
+   tap_decap_or
+   run_placement
+```
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/f0ab6b72-97f0-492a-8b08-b2cac57bf539)
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/3033f646-7cc9-49e5-b2b6-12359ba8f0b1)
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/d47ed3d6-b87c-4bf3-bcf8-8d21d2595ee6)
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/ab8c7910-169b-44ae-982d-e198256b8c73)
+
+- Finally we run `run cts` command<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/1062ddca-6f12-4903-a5b0-c620bfbfbc3c)
+<br>
+
+- The output will be as follows:<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/73a27c25-89e4-420d-9167-9cd96e2601c8)
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/53c7e56c-6fed-4711-85c4-1006208f4fc5)
+
+
 
 
 
