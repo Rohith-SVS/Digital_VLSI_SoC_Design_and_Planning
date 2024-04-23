@@ -238,6 +238,39 @@ ngspice sky130_inv.spice
 - Propogation Delay : (2.2106-2.15012)e-09 = 40.48 psec
 - Cell Fall Delay : (4.07735-4.04988)e-09 = 27.47 psec
 
+## Magic tool options and DRC Rules
+
+- To download and extract DRC Corrections, run the following commands
+```
+$ wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+$ tar xfz drc_tests.tgz
+$ cd drc_tests
+```
+<br>
+
+- The following contents will be listed in the folder:<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/365f419c-159a-4aa6-967f-d0bfd90dc242)
+<br>
+
+- To open magic, use the command `$ magic -d XR &`<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/8bb4650c-a717-417a-bd95-b68078bcca5d)
+<br>
+
+- `drc why` will show the reasons for errors in the system.<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/40da335c-db85-4d10-b7da-8286adaea1ba)
+
+- We create a M3 layer using the middle mouse button followed by the instruction `cif see VIA2` to represent the contact cuts<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/76d07384-2ad3-493d-9e5b-ea33f1b26f2a)
+<br>
+
+- `feed clear` instruction can be used to remove the contact cuts<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/47b475ec-48d4-4b29-9e05-6ca33d02f306)
+
 
 
 
