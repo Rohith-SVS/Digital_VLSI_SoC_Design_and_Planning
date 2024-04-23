@@ -391,6 +391,29 @@ wns -24.89
 - The floorplan executed can be verified in the Magic terminal<br>
 
 ![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/609bae67-6e54-4bb9-b963-246b4a83be69)
+
+## Post Synthesis Timing Analysis
+
+- Perform Synthesis using the standard procedure
+- Make a new file called `pre_sta.conf` using the command `vim pre_sta.conf` store this file in OpenLANE folder
 <br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/c1d5e1f7-98cb-440a-963e-bb8ea1facc6d)
+
+<br>
+
+- Now we will create a new `my_base.sdc` and edit the content as shown below. The file will be stored in `openlane/designs/picorv32a/src`<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/fd3fe008-1bd5-4541-847c-a55d7fa29790)
+<br>
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/17c5eda7-0779-4e9e-8840-8302f4178507)
+<br>
+
+-
+
+
+
+
+
 
 
