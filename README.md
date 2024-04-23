@@ -350,7 +350,45 @@ run_synthesis
 ![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/6a61dbfb-baf9-4d34-8056-a3b22550809d)
 <br>
 
--
+## Steps to configure synthesis settings to fix slack and include vsdinv
+
+- We refer to README file using `/configuration` and `less README.md`
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/52dff106-80bb-4a7b-8927-9579839d2ada)
+
+- We make the following changes
+```
+echo $::env(SYNTH_STRATEGY)
+
+set ::env(SYNTH_STRATEGY) "DELAY 3"
+
+echo $::env(SYNTH_BUFFERING)
+
+echo $::env(SYNTH_SIZING)
+
+set ::env(SYNTH_SIZING) 1
+
+echo $::env(SYNTH_DRIVING_CELL)
+```
+- In the last execution, we observed the following:
+```
+tns -759.46
+wns -24.89
+```
+- After making the above changes, the results will be as follows:
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/7a0bd5d1-fa30-4daa-aae9-bb45d0b25e13)
+<br>
+
+- Next step is to execute the floorplan
+<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/acaa61f8-1114-4d46-831a-cbc32fd74f02)
+<br>
+
+- The floorplan will be executed as follows<br>
 
 
 
