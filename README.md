@@ -211,7 +211,32 @@ Courtesy: nickson-jose
 <br>
 
 ![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/bfaf2a0e-95a5-4067-bb47-0e4200b2fccb)
+<br>
 
+- The following changes are made to perform transient analysis for the given circuit:<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/8fc4894e-548c-405d-801f-d5dc40c92f7a)
+<br>
+
+- To run the spice simulation use command:
+```
+ngspice sky130_inv.spice
+```
+- The output will be as follows<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/ce90612a-7265-4803-8c47-75bd96f49b0f)
+<br>
+
+- To plot the graph, we should enter the command `plot y vs time a`<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/8d0dc161-afb7-4242-8751-e29a97f28034)
+<br>
+
+- We can calculate Rise Time, Fall Time, Propogation Delay and Cell Fall Delay from the above graph:
+- Rise Time : (2.2489-2.1819)e-09 = 66.92 psec
+- Fall Time : (4.09512-4.05264)e-09 = 42.51 psec
+- Propogation Delay : (2.2106-2.15012)e-09 = 40.48 psec
+- Cell Fall Delay : (4.07735-4.04988)e-09 = 27.47 psec
 
 
 
