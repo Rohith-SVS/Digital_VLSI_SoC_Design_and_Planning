@@ -390,6 +390,7 @@ wns -24.89
 
 - The floorplan will be executed as follows<br>
 
-
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/609bae67-6e54-4bb9-b963-246b4a83be69)
+<br>
 
 
