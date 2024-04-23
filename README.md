@@ -342,8 +342,6 @@ pdk/sky130/libs.tech/openlane/sky130_fd_sc_hd/track.info
 ./flow.tcl -interactive
 package require openlane 0.9
 prep -design picorv32a
-set lefs [glob $::env(DESIGN_DIR)/src/*.lef]      
-add_lefs -src $lefs
 run_synthesis
 ```
 - We will get te following output
