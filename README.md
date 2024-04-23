@@ -409,6 +409,13 @@ wns -24.89
 ![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/17c5eda7-0779-4e9e-8840-8302f4178507)
 <br>
 
+- Use the command `sta pre_sta.conf` to perform Static timing analysis<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/6d40d224-d044-476f-89a9-b13cbce30620)
+<br>
+
+## Optimize synthesis to reduce Violations
+
 -
 
 
