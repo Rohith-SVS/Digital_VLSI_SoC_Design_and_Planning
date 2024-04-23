@@ -493,6 +493,24 @@ report_checks -fields {net cap slew input_pins} -digits 4
 
 ![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/53c7e56c-6fed-4711-85c4-1006208f4fc5)
 
+## Lab Steps to verify CTS
+- The Cts functionality is stored in `cts.tcl`<br>
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/64c84388-2366-4ba6-8670-c8f22a8e9544)
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/b6de888a-949e-4b55-a720-ac6268a100d7)
+<br>
+
+- The following commands are used for verification
+```
+echo $::env(LIB_SYNTH_COMPLETE)
+echo $::env(LIB_TYPICAL)
+echo $::env(CURRENT_DEF)
+echo $::env(SYNTH_MAX_TRAN)
+echo $::env(CTS_MAX_CAP)
+echo $::env(CTS_CLK_BUFFER_LIST)
+echo $::env(CTS_ROOT_BUFFER)
+```
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/c614f71b-6438-4cb5-b33c-17c78e9f1e99)
 
 
 
