@@ -512,6 +512,11 @@ echo $::env(CTS_ROOT_BUFFER)
 ```
 ![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/c614f71b-6438-4cb5-b33c-17c78e9f1e99)
 
+<br><br>
+- Screenshot after Routing
+
+![image](https://github.com/Rohith-SVS/Digital_VLSI_SoC_Design_and_Planning/assets/167219715/7269d6c9-5cd3-442c-80b8-48db4f8a5a71)
+
 
 
 
